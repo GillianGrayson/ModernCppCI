@@ -2,8 +2,6 @@
  *  Distributed under the MIT License (See accompanying file /LICENSE )
  */
 #include <catch.hpp>
-#include <iostream>
-#include <memory>
 #include "calc.h"
 
 namespace ModernCppCI {
