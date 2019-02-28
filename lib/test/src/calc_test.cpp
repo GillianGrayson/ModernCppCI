@@ -3,7 +3,7 @@
  */
 #include "calc.h"
 #include <catch.hpp>
-#include <iostream>
+#include <sstream>
 #include <memory>
 
 namespace ModernCppCI {
