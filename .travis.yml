@@ -7,10 +7,6 @@ notifications:
 os: linux
 dist: xenial
 
-addons:
-  apt:
-    packages: lcov
-
 matrix:
   include:
 
@@ -51,7 +47,9 @@ matrix:
     - env: COMPILER=g++-7 BUILD_TYPE=Debug
       addons: &gcc7
         apt:
-          packages: g++-7
+          packages:
+            - g++-7
+			- lcov
           sources:
             - ubuntu-toolchain-r-test
 
