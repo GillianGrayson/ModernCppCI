@@ -33,7 +33,8 @@ matrix:
       env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
 
 	# Clang 7.0
-    - env: COMPILER=clang++-7 BUILD_TYPE=Debug GSL_CXX_STANDARD=14
+    - os: linux
+      env: COMPILER=clang++-7 BUILD_TYPE=Debug
       addons: &clang70
         apt:
           packages:
@@ -43,7 +44,8 @@ matrix:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-7
 
-    - env: COMPILER=clang++-7 BUILD_TYPE=Release GSL_CXX_STANDARD=14
+    - os: linux
+      env: COMPILER=clang++-7 BUILD_TYPE=Release
       addons: *clang70
 
     # OSX C++14 Clang Builds
