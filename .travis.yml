@@ -32,15 +32,27 @@ matrix:
       addons: *clang38
       env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
 
+	# Clang 7.0
+    - env: COMPILER=clang++-7 BUILD_TYPE=Debug GSL_CXX_STANDARD=14
+      addons: &clang70
+        apt:
+          packages:
+            - clang-7
+            - g++-7
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-7
+
+    - env: COMPILER=clang++-7 BUILD_TYPE=Release GSL_CXX_STANDARD=14
+      addons: *clang70
+
     # OSX C++14 Clang Builds
 
     - os: osx
-      osx_image: xcode8.3
       compiler: clang
       env: COMPILER='clang++' BUILD_TYPE='Debug'
 
     - os: osx
-      osx_image: xcode8.3
       compiler: clang
       env: COMPILER='clang++' BUILD_TYPE='Release'
 
