@@ -11,19 +11,14 @@ matrix:
 
     ##########################################################################
     # Clang on OSX
-    # Travis seems to take longer to start OSX instances,
-    # so leave this first for the overall build to be faster
     ##########################################################################
 
-    # XCode 9.1
     - env: COMPILER=clang++ BUILD_TYPE=Debug
       os: osx
-      osx_image: xcode9.1
       compiler: clang
 
     - env: COMPILER=clang++ BUILD_TYPE=Release
       os: osx
-      osx_image: xcode9.1
       compiler: clang
 
     ##########################################################################
@@ -40,7 +35,6 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-7
-
 
     - env: COMPILER=clang++-7 BUILD_TYPE=Release
       addons: *clang70
