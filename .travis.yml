@@ -49,7 +49,6 @@ matrix:
         apt:
           packages:
             - g++-7
-			- lcov
           sources:
             - ubuntu-toolchain-r-test
 
