@@ -31,7 +31,7 @@ auto create_spdlog() {
   dist_sink->add_sink(debug_sink);
 #endif  // _DEBUG && _MSC_VER
 
-  return std::make_shared<spdlog::logger>("console", debug_sink);
+  return std::make_shared<spdlog::logger>("console", dist_sink);
 }
 
 Logger::Logger(const std::string &section) : section_{section} {
