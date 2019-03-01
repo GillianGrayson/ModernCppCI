@@ -14,11 +14,11 @@ matrix:
     # Clang on OSX
     ##########################################################################
 
-    - env: COMPILER=clang++ BUILD_TYPE=Debug
+    - env: COMPILER=clang++ BUILD_TYPE=Debug CMAKE_OPTNS="-D CODE_COVERAGE:BOOL=FALSE"
       os: osx
       compiler: clang
 
-    - env: COMPILER=clang++ BUILD_TYPE=Release
+    - env: COMPILER=clang++ BUILD_TYPE=Release CMAKE_OPTNS="-D CODE_COVERAGE:BOOL=FALSE"
       os: osx
       compiler: clang
 
@@ -27,7 +27,7 @@ matrix:
     ##########################################################################
 
     # Clang 7.0
-    - env: COMPILER=clang++-7 BUILD_TYPE=Debug
+    - env: COMPILER=clang++-7 BUILD_TYPE=Debug CMAKE_OPTNS="-D CODE_COVERAGE:BOOL=FALSE"
       addons: &clang70
         apt:
           packages:
@@ -37,14 +37,14 @@ matrix:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-7
 
-    - env: COMPILER=clang++-7 BUILD_TYPE=Release
+    - env: COMPILER=clang++-7 BUILD_TYPE=Release CMAKE_OPTNS="-D CODE_COVERAGE:BOOL=FALSE"
       addons: *clang70
 
     ##########################################################################
     # GCC on Linux
     ##########################################################################
 
-    - env: COMPILER=g++-7 BUILD_TYPE=Debug
+    - env: COMPILER=g++-7 BUILD_TYPE=Debug CMAKE_OPTNS="-D CODE_COVERAGE:BOOL=TRUE"
       addons: &gcc7
         apt:
           packages:
@@ -53,7 +53,7 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
 
-    - env: COMPILER=g++-7 BUILD_TYPE=Release
+    - env: COMPILER=g++-7 BUILD_TYPE=Release CMAKE_OPTNS="-D CODE_COVERAGE:BOOL=FALSE"
       addons: *gcc7
 
 install:
@@ -71,7 +71,7 @@ install:
 before_script:
   - export CXX=${COMPILER}
   - cd ${TRAVIS_BUILD_DIR}
-  - cmake -H. -BBuild -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -Wdev
+  - cmake -H. -BBuild -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -Wdev CMAKE_OPTNS
   - cd Build
 
 script:
