@@ -48,7 +48,7 @@ matrix:
       addons: &gcc7
         apt:
           packages:
-		    - lcov
+            - lcov
             - g++-7
           sources:
             - ubuntu-toolchain-r-test
