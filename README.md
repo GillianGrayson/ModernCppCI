@@ -4,7 +4,7 @@
 
 | Build status          | Systems / Compilers         |
 | ------------- | ------------------------------------------ |
-| [![CLang  / GCC / XCode Builds](https://travis-ci.org/GillianGrayson/ModernCppCI.svg?branch=master)](https://travis-ci.org/GillianGrayson/ModernCppCI) | Linux (clang38  / gcc6) OSX (XCode 8.3 clang) |
+| [![CLang  / GCC / XCode Builds](https://travis-ci.org/GillianGrayson/ModernCppCI.svg?branch=master)](https://travis-ci.org/GillianGrayson/ModernCppCI) | Linux (clang  / gcc) OSX (XCode clang) |
 | [![Visual Studio Builds](https://ci.appveyor.com/api/projects/status/ih7bv9b0u475phjk?svg=true)](https://ci.appveyor.com/project/GillianGrayson/moderncppci)       | Windows (Visual Studio 2017 / 2015)  |
 
 ## info
