@@ -5,6 +5,7 @@ notifications:
 
 # Use Linux unless specified otherwise
 os: linux
+dist: xenial
 
 addons:
   apt:
