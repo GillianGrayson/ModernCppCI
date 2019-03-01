@@ -1,15 +1,11 @@
 # Modern C++ Continuous Integration
 
-This project is illustrating [this blog post](https://juan-medina.com/2017/07/01/moderncppci/).
-
-[<img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" height="25"/> <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg" height="25"/> <img src="https://github.com/philsquared/Catch/blob/master/catch-logo-small.png" height="25"/> <img src="https://cdn.travis-ci.com/images/logos/TravisCI-Full-Color-45e242791b7752b745a7ae53f265acd4.png" height="25"/> <img src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/16896/ApwXsQaJT16xVdsGs7aY" height="25"/>](#references)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
 
 | Build status          | Systems / Compilers         |
 | ------------- | ------------------------------------------ |
-| [![CLang  / GCC / XCode Builds](https://travis-ci.org/LearningByExample/ModernCppCI.svg?branch=master)](https://travis-ci.org/LearningByExample/ModernCppCI) | Linux (clang38  / gcc6) OSX (XCode 8.3 clang) |
-| [![Visual Studio Builds](https://ci.appveyor.com/api/projects/status/t6i95u07gw1gqhql/branch/master?svg=true)](https://ci.appveyor.com/project/juan-medina/moderncppci/branch/master)       | Windows (Visual Studio 2017 / 2015)  |
+| [![CLang  / GCC / XCode Builds](https://travis-ci.org/GillianGrayson/ModernCppCI.svg?branch=master)](https://travis-ci.org/GillianGrayson/ModernCppCI) | Linux (clang38  / gcc6) OSX (XCode 8.3 clang) |
+| [![Visual Studio Builds](https://ci.appveyor.com/api/projects/status/ih7bv9b0u475phjk?svg=true)](https://ci.appveyor.com/project/GillianGrayson/moderncppci)       | Windows (Visual Studio 2017 / 2015)  |
 
 ## info
 This is an example of doing a Modern C++ project with CI.
@@ -22,7 +18,11 @@ This project try to follow [C++ Core Guidelines](https://github.com/isocpp/CppCo
 
 ## libraries used
 - [spdlog](https://github.com/gabime/spdlog) for a moderm log system. (as submodule)
-- [catch](https://github.com/philsquared/Catch) as the test framework.  (as submodule)
+- [Catch2](https://github.com/catchorg/Catch2.git) as the test framework.  (as submodule)
+
+## creating repository
+Simply copy/paste the folder (without the .git folder) and run the .bat file (renaming to .sh should work for linux).
+This will create an initial git commit and add the required submodules.
 
 ##  project structure
 
