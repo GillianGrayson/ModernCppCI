@@ -1,6 +1,7 @@
 # Modern C++ Continuous Integration
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
+[![codecov](https://codecov.io/gh/GillianGrayson/ModernCppCI/branch/master/graph/badge.svg)](https://codecov.io/gh/GillianGrayson/ModernCppCI)
 
 | Build status          | Systems / Compilers         |
 | ------------- | ------------------------------------------ |
